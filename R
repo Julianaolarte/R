@@ -1,0 +1,25 @@
+#CREAR MATRIZ
+makeCacheMatrix  <-  función ( x  =  matriz ()) {               
+inv  <-  NULO
+set  <-  función ( y ) {
+    x  << -  y
+    inv  << -  NULO
+  }
+  obtener  <-  función () x
+  setinverse  <-  función ( inversa ) inv  << -  inversa
+  getinverse  <-  función () inv
+  lista ( set  =  set , get  =  get , setinverse  =  setinverse , getinverse  =  getinverse )
+}
+
+#INVERSA
+cacheSolve  <-  función ( x , ... ) {
+  # # Devuelve una matriz que es la inversa de 'x'
+  inversión <- x $ getInverse ()
+  if ( ! is.null ( inversión )) {
+    mensaje ( ' obteniendo datos en caché ' )
+    retorno ( inversión )
+  }
+  datos <- x $ get ()
+  inversión <- resolver ()
+  x $ setInverse ( inversión )
+}
